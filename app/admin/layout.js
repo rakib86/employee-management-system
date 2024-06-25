@@ -43,8 +43,8 @@ export default function RootLayout({ children }) {
   }
 
   return (
-    <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr]">
-      <div className="hidden border-r bg-gray-100/40 lg:block dark:bg-gray-800/40">
+    <div className="grid min-h-screen bg-black w-full lg:grid-cols-[280px_1fr]">
+      <div className="hidden border-r lg:block dark:bg-gray-800/40">
         <div className="flex h-full max-h-screen flex-col gap-2">
           <div className="flex h-[60px] items-center border-b px-6">
             <Link className="flex items-center gap-2 font-semibold" href="#">
@@ -62,32 +62,12 @@ export default function RootLayout({ children }) {
               </Link>
               <Link
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                href="/dashboard/task"
+                href="/admin/add"
               >
                 <BiSolidCategory />
-                My Task List
+               Add Employee
               </Link>
-              <Link
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                href="/dashboard/addfont"
-              >
-                <FaFontAwesome />
-                My Upcoming Work
-              </Link>
-              <Link
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                href="/dashboard/fonts"
-              >
-                <BiFontFamily />
-                Company Leaderboard
-              </Link>
-              <Link
-               className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                href="/dashboard/admins"
-              >
-                <MdAdminPanelSettings />
-                Contact to Boss
-              </Link>
+             
               <Button className="fixed bottom-5" onClick={() => auth.signOut()}>
                 SignOut
               </Button>

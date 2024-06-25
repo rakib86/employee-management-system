@@ -17,10 +17,7 @@ export default function Signup() {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
         //show current user email if user is signed in
 
-       
-      if (user) {
-        window.location.href = "/dashboard"; // Redirect to dashboard if user is already signed in
-      }
+
     });
 
     return () => unsubscribe(); // Cleanup subscription on component unmount
@@ -30,17 +27,14 @@ export default function Signup() {
     e.preventDefault();
     setIsLoading(true);
 
- 
-
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-    const name = e.target.name.value;
-    const age = e.target.age.value;
-    const location = e.target.location.value;
-    const department = e.target.department
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const name = document.getElementById("name").value;
+    const age = document.getElementById("age").value;
+    const location = document.getElementById("location").value;
+    const department = document.getElementById("department").value;
 
 
-    
 
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);

@@ -75,7 +75,7 @@ export default function Page() {
         placeholder="Enter a task"
         className="mb-2"
       />
-      <Button onClick={handleAddTask} className="mb-4">Add Task</Button>
+      <Button onClick={handleAddTask} className="mb-4" variant="secondary">Add Task</Button>
       {tasks.map((task, index) => (
         <div key={index} className="flex justify-between items-center bg-gray-100 p-2 rounded shadow mb-2">
      <span>{`${index + 1}. ${task}`}</span>

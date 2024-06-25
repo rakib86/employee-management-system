@@ -12,6 +12,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import {signInWithEmailAndPassword} from "firebase/auth";
 import { auth, db } from '@/config/firebase';
 import { collection, getDocs, query, where } from 'firebase/firestore';
+import Link from 'next/link'
 
 
 
@@ -102,6 +103,9 @@ const handleSignIn = async (e) => {
               <p>Sign In</p>
             )}
           </Button>
+          <Link href="/signup">
+           Create an account
+          </Link>
         </div>
       </form>
    
